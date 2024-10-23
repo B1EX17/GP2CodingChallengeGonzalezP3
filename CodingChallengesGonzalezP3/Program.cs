@@ -18,6 +18,9 @@ class Challenges
             Console.WriteLine("5. Calculate the area of a triangle");
             Console.WriteLine("6. Determine if a number is less than or equal to zero");
             Console.WriteLine("7. Convert Voltage to Power");
+            Console.WriteLine("8. Determine if the sum of two numbers is less then 100");
+            
+
 
             string choice = Console.ReadLine();
 
@@ -79,6 +82,19 @@ class Challenges
 
                     Console.WriteLine(Voltage(number1int, number2int));
                     break;
+                case "8":
+                    Console.WriteLine("Determine if the sum of a number is Lessthan100 than and hundred");
+                    Console.Write("Enter firts number:");
+                    var number9 = Console.ReadLine();
+                    int number9int = int.Parse(number9);
+
+                    var number10 = Console.ReadLine();
+                    int number10int = int.Parse(number10);
+
+                    Console.WriteLine(LessThan100(number9int, number10int));
+                    break;
+
+
 
             }
 
@@ -127,7 +143,20 @@ class Challenges
     {
         return number1 * number2;
     }
+    
+    public static bool LessThan100(int number9, int number10)
+    {
+        return number9 + number10 < 100;
+    }
+   
+    
+    
+
+    
 }
+
+
+
 
 
 
