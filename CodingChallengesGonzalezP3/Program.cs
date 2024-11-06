@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.InteropServices;
 
 
 class Challenges
@@ -19,7 +20,11 @@ class Challenges
             Console.WriteLine("6. Determine if a number is less than or equal to zero");
             Console.WriteLine("7. Convert Voltage to Power");
             Console.WriteLine("8. Determine if the sum of two numbers is less then 100");
-            
+            Console.WriteLine("9. Determine if numbers are equal to each other");
+            Console.WriteLine("10.Give me something");
+            Console.WriteLine("11.The function reverses a boolean value");
+
+
 
 
             string choice = Console.ReadLine();
@@ -83,18 +88,54 @@ class Challenges
                     Console.WriteLine(Voltage(number1int, number2int));
                     break;
                 case "8":
-                    Console.WriteLine("Determine if the sum of a number is Lessthan100 than and hundred");
-                    Console.Write("Enter firts number:");
+                    Console.WriteLine("Determine if the sum of a number is Less than 100");
+                    Console.Write("Enter first number:");
                     var number9 = Console.ReadLine();
                     int number9int = int.Parse(number9);
-
+                    Console.Write("Enter second number:");
                     var number10 = Console.ReadLine();
                     int number10int = int.Parse(number10);
 
                     Console.WriteLine(LessThan100(number9int, number10int));
                     break;
 
+                case "9":
+                    Console.WriteLine("Determine if numbers are equal to each other");
+                    Console.Write("Enter first number:");
+                    var number11 = Console.ReadLine();
+                    int number11int = int.Parse(number11);
+                    Console.Write("Enter second number:");
+                    var number12 = Console.ReadLine();
+                    int number12int = int.Parse(number12);
 
+                    Console.WriteLine(IsEqual(number11int, number12int));
+                    break;
+                case "10":
+                    Console.WriteLine("Add Something to Anything");
+                    Console.Write("Something added to:");
+                    string phrase = Console.ReadLine();   
+
+                    Console.WriteLine(GiveMeSomething(phrase));
+                    break;
+
+                case "11":
+                    Console.WriteLine("Lets reverse a boolean");
+                    var trueorfalse = Console.ReadLine();
+
+                    if (trueorfalse == "true")
+                    {
+                        Console.WriteLine("Its False");
+                    }
+                    else if (trueorfalse == "false")
+                    {
+                        Console.WriteLine("Its True");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Try again you mispelled something");
+                    }
+
+                    break;
 
             }
 
@@ -143,16 +184,25 @@ class Challenges
     {
         return number1 * number2;
     }
-    
+
     public static bool LessThan100(int number9, int number10)
     {
         return number9 + number10 < 100;
     }
-   
-    
-    
+
+    public static bool IsEqual(int number11, int number12)
+    {
+        return number11 <= number12;
+    }
+
+
+    public static string GiveMeSomething(string phrase)
+    {
+        return "Something" + phrase;
+    }
 
     
+
 }
 
 
