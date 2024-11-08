@@ -23,6 +23,7 @@ class Challenges
             Console.WriteLine("9. Determine if numbers are equal to each other");
             Console.WriteLine("10.Give me something");
             Console.WriteLine("11.The function reverses a boolean value");
+            Console.WriteLine("12.Find how many seconds are in a hour");
 
 
 
@@ -136,6 +137,13 @@ class Challenges
                     }
 
                     break;
+                case "12":
+                    Console.WriteLine("You chose to convert minutes to seconds.");
+                    Console.Write("Enter the number of hours: ");
+                    int seconds = int.Parse(Console.ReadLine());
+                    Console.WriteLine($"{seconds} is equal to {howManySeconds(seconds)} seconds.");
+                    break;
+
 
             }
 
@@ -201,7 +209,11 @@ class Challenges
         return "Something" + phrase;
     }
 
-    
+    public static int howManySeconds(int seconds)
+    {
+        return seconds * 3600;
+    }
+
 
 }
 
