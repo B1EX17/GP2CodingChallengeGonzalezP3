@@ -24,7 +24,7 @@ class Challenges
             Console.WriteLine("10.Give me something");
             Console.WriteLine("11.The function reverses a boolean value");
             Console.WriteLine("12.Find how many seconds are in a hour");
-
+            Console.WriteLine("13. Determine the sum of all the measures of the angles of an ___ sided polygon");
 
 
 
@@ -114,7 +114,7 @@ class Challenges
                 case "10":
                     Console.WriteLine("Add Something to Anything");
                     Console.Write("Something added to:");
-                    string phrase = Console.ReadLine();   
+                    string phrase = Console.ReadLine();
 
                     Console.WriteLine(GiveMeSomething(phrase));
                     break;
@@ -142,6 +142,24 @@ class Challenges
                     Console.Write("Enter the number of hours: ");
                     int seconds = int.Parse(Console.ReadLine());
                     Console.WriteLine($"{seconds} is equal to {howManySeconds(seconds)} seconds.");
+                    break;
+
+                case "13":
+                    Console.WriteLine("You choose to determine the sum all measure of the angles of am n-sided Polygon. ");
+                    Console.Write("Enter the number sides on the regular poligan ");
+
+
+                    int n = int.Parse(Console.ReadLine());
+                    if (n <= 2)
+                    {
+                        Console.WriteLine("The number is less than 2 ");
+                    }
+    
+                    
+                    else if (n > 2)
+                    {
+                        Console.WriteLine($"{n} returning the sum of internal angles is {SumPolygon(n)}.");
+                    }
                     break;
 
 
@@ -212,6 +230,11 @@ class Challenges
     public static int howManySeconds(int seconds)
     {
         return seconds * 3600;
+    }
+
+    public static int SumPolygon(int n)
+    {
+        return (n - 2) * 180;
     }
 
 
